@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+            perspective: 1000px; 
+        }
+        .box{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            /* transform: rotateY(-45deg) ;  */
+            
+        }
+        .wrap:hover .box{
+            transition: 5s;
+            transform:rotateX(45deg) rotateY(45deg) rotateZ(45deg);
+        }
+        .box>div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .left{
+            background-color: #f99;
+            transform: rotateY(90deg) translateZ(-200px);
+        }
+        .right{
+            background-color: rgb(255, 248, 153);
+            transform: rotateY(90deg) translateZ(200px);
+        }
+        .top{
+            background-color: rgb(182, 255, 153);
+            transform: rotateX(90deg) translateZ(200px);
+        }
+        .bottom{
+            background-color: rgb(25, 171, 216);
+            transform: rotateX(90deg) translateZ(-200px);
+
+        }
+        .front{
+            transition: 5s;
+            background-color: rgb(40, 7, 160);
+            transform: rotateZ(100px);
+        }
+        .back{
+            background-color: rgb(214, 11, 11);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box">
+            <div class="front"></div>
+            <div class="back"></div>
+            <div class="top"></div>
+            <div class="bottom"></div>
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+    </div>
+</body>
+</html>
