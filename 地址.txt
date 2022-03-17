@@ -1,0 +1,2 @@
+https://github.com/AIFF628/Warehouse.git    http
+git@github.com:AIFF628/Warehouse.git         ssh
